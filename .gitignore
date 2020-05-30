@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/git,java,gradle,intellij+all
 # Edit at https://www.gitignore.io/?templates=git,java,gradle,intellij+all
 
+### Secure Properties ###
+application-oauth.properties
+
 ### Git ###
 # Created by git for backups. To disable backups in Git:
 # $ git config --global mergetool.keepBackup false
@@ -150,5 +153,4 @@ gradle-app.setting
 
 # End of https://www.gitignore.io/api/git,java,gradle,intellij+all
 
-### Secure Properties ###
-application-oauth.properties
+src/test/resources/
