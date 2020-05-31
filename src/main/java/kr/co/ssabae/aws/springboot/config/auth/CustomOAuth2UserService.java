@@ -1,4 +1,4 @@
-package kr.co.ssabae.aws.springboot.service;
+package kr.co.ssabae.aws.springboot.config.auth;
 
 import kr.co.ssabae.aws.springboot.config.auth.dto.SessionUser;
 import kr.co.ssabae.aws.springboot.domain.user.User;
