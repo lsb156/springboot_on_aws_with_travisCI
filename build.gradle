@@ -1,6 +1,7 @@
 buildscript {
+
     ext {
-        springBootVersion = '2.1.9.RELEASE'
+        springBootVersion = '2.1.7.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -22,21 +23,19 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
+
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.projectlombok:lombok')
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile('org.springframework.boot:spring-boot-starter-mustache')
-    compile('com.h2database:h2')
-
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
     compile('org.springframework.session:spring-session-jdbc')
 
-    compile("org.mariadb.jdbc:mariadb-java-client")
+    compile('org.projectlombok:lombok')
+    compile('com.h2database:h2')
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
-    testCompile("org.springframework.security:spring-security-test")
+    testCompile('org.springframework.security:spring-security-test')
 }

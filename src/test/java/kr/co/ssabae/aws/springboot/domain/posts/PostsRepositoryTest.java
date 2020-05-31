@@ -1,5 +1,6 @@
 package kr.co.ssabae.aws.springboot.domain.posts;
 
+import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class PostsRepositoryTest {
+public class PostsRepositoryTest extends TestCase {
 
     @Autowired
     PostsRepository postsRepository;

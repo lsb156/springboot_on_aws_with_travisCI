@@ -1,26 +1,22 @@
 package kr.co.ssabae.aws.springboot.web;
 
-import kr.co.ssabae.aws.springboot.service.PostsService;
-import kr.co.ssabae.aws.springboot.web.dto.PostsListResponseDto;
+import kr.co.ssabae.aws.springboot.service.posts.PostsService;
 import kr.co.ssabae.aws.springboot.web.dto.PostsResponseDto;
 import kr.co.ssabae.aws.springboot.web.dto.PostsSaveRequestDto;
 import kr.co.ssabae.aws.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
 
     private final PostsService postsService;
+
+    @GetMapping("/api/v1/posts/{id}")
+    public PostsResponseDto findById(@PathVariable Long id) {
+        return postsService.findById(id);
+    }
 
     @PostMapping("/api/v1/posts")
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
@@ -36,15 +32,5 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id) {
         postsService.delete(id);
         return id;
-    }
-
-    @GetMapping("/api/v1/posts/{id}")
-    public PostsResponseDto findById(@PathVariable Long id) {
-        return postsService.findById(id);
-    }
-
-    @GetMapping("/api/v1/posts/list")
-    public List<PostsListResponseDto> findAll() {
-        return postsService.findAllDesc();
     }
 }

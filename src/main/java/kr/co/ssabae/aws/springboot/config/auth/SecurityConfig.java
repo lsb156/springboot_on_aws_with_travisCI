@@ -1,6 +1,7 @@
 package kr.co.ssabae.aws.springboot.config.auth;
 
 import kr.co.ssabae.aws.springboot.domain.user.Role;
+import kr.co.ssabae.aws.springboot.service.CustomOAuth2UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
