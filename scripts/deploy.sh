@@ -39,6 +39,6 @@ chmod +x $JAR_NAME
 
 echo "> $JAR_NAME 실행"
 
-JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=real $REPOSITORY/$JAR_NAME"
+JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=real $JAR_NAME"
 echo "> $JAVA_JAR_RUN"
 nohup $JAVA_JAR_RUN 2>&1 &
