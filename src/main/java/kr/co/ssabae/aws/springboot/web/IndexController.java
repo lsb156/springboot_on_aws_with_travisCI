@@ -2,10 +2,9 @@ package kr.co.ssabae.aws.springboot.web;
 
 import kr.co.ssabae.aws.springboot.config.auth.LoginUser;
 import kr.co.ssabae.aws.springboot.config.auth.dto.SessionUser;
-import kr.co.ssabae.aws.springboot.service.posts.PostsService;
+import kr.co.ssabae.aws.springboot.service.PostsService;
 import kr.co.ssabae.aws.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

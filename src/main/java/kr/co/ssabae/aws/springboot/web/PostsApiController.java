@@ -1,6 +1,6 @@
 package kr.co.ssabae.aws.springboot.web;
 
-import kr.co.ssabae.aws.springboot.service.posts.PostsService;
+import kr.co.ssabae.aws.springboot.service.PostsService;
 import kr.co.ssabae.aws.springboot.web.dto.PostsResponseDto;
 import kr.co.ssabae.aws.springboot.web.dto.PostsSaveRequestDto;
 import kr.co.ssabae.aws.springboot.web.dto.PostsUpdateRequestDto;

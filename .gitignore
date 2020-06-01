@@ -3,8 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=git,java,gradle,intellij+all
 
 ### Secure Properties ###
-application-backup-*.properties
-
+properties/**
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:

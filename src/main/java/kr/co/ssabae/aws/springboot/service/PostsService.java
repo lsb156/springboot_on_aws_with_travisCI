@@ -1,4 +1,4 @@
-package kr.co.ssabae.aws.springboot.service.posts;
+package kr.co.ssabae.aws.springboot.service;
 
 import kr.co.ssabae.aws.springboot.domain.posts.Posts;
 import kr.co.ssabae.aws.springboot.domain.posts.PostsRepository;
