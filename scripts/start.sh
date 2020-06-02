@@ -32,7 +32,12 @@ IDLE_PROPERTIES=classpath:/application-$IDLE_PROFILE.properties
 ALL_PROPERTIES=classpath:/application.properties,$REAL_PROPERTIES,$IDLE_PROPERTIES,$OAUTH_PROPERTIES,$REAL_DB_PROPERTIES
 
 echo "> $JAR_NAME 를 profile=$IDLE_PROFILE 로 실행합니다."
+nohup java -jar \
+    -Dspring.config.location=classpath:/application.properties,classpath:/application-$IDLE_PROFILE.properties,$PROPERTIES_PATH/application-oauth.properties,$PROPERTIES_PATH/application-real-db.properties \
+    -Dspring.profiles.active=$IDLE_PROFILE \
+    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
 
-JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=$IDLE_PROFILE $JAR_NAME"
-echo "> $JAVA_JAR_RUN"
-nohup $JAVA_JAR_RUN 2>&1 &
+
+#JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=$IDLE_PROFILE $JAR_NAME"
+#echo "> $JAVA_JAR_RUN"
+#nohup $JAVA_JAR_RUN 2>&1 &
