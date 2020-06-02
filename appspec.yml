@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    destination: /home/ubuntu/app/step2/zip
+    destination: /home/ubuntu/app/step3/zip
     overwrite: yes
 
 permissions:
