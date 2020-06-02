@@ -38,6 +38,6 @@ echo "> $JAR_NAME 를 profile=$IDLE_PROFILE 로 실행합니다."
 #    -Dspring.profiles.active=$IDLE_PROFILE \
 #    $JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
 
-JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=$IDLE_PROFILE $JAR_NAME "
+JAVA_JAR_RUN="/home/ubuntu/.sdkman/candidates/java/current/bin/java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=$IDLE_PROFILE $JAR_NAME "
 echo "> $JAVA_JAR_RUN"
 nohup $JAVA_JAR_RUN  > $REPOSITORY/nohup 2>&1 &
