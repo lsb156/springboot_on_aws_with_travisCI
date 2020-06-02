@@ -33,6 +33,6 @@ ALL_PROPERTIES=classpath:/application.properties,$REAL_PROPERTIES,$IDLE_PROPERTI
 
 echo "> $JAR_NAME 를 profile=$IDLE_PROFILE 로 실행합니다."
 
-JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=real $IDLE_PROFILE"
+JAVA_JAR_RUN="java -jar -Dspring.config.location=$ALL_PROPERTIES -Dspring.profile.active=$IDLE_PROFILE $JAR_NAME"
 echo "> $JAVA_JAR_RUN"
 nohup $JAVA_JAR_RUN 2>&1 &
